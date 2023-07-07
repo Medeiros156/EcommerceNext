@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ProductBox from "@/components/ProductBox";
-import FilterSearch from 'react-filter-search';
 import { useState } from "react";
 
 const StyledProductsGrid = styled.div`
