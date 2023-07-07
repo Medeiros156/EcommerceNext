@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce-front",
+  "name": "e-commerce-front",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,11 +12,15 @@
     "axios": "^1.3.4",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "faker": "^6.6.6",
     "micro": "^10.0.1",
     "mongoose": "^7.0.2",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-filter-search": "^1.1.11",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "stripe": "^11.16.0",
     "styled-components": "^5.3.9"
   }

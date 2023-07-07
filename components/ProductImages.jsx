@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import {useState} from "react";
+import { useState } from "react";
 
 const Image = styled.img`
     max-width: 100%;
     max-height: 100%;
   `;
 const BigImage = styled.img`
-  max-width: 100%;
-  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 const ImageButtons = styled.div`
     display: flex;
@@ -29,10 +30,11 @@ const ImageButton = styled.div`
   `;
 const BigImageWrapper = styled.div`
   text-align: center;
+  
 `;
 
-export default function ProductImages({images}) {
-  const [activeImage,setActiveImage] = useState(images?.[0]);
+export default function ProductImages({ images }) {
+  const [activeImage, setActiveImage] = useState(images?.[0]);
   return (
     <>
       <BigImageWrapper>
@@ -42,9 +44,9 @@ export default function ProductImages({images}) {
         {images.map(image => (
           <ImageButton
             key={image}
-            active={image===activeImage}
+            active={image === activeImage}
             onClick={() => setActiveImage(image)}>
-            <Image src={image} alt=""/>
+            <Image src={image} alt="" />
           </ImageButton>
         ))}
       </ImageButtons>
