@@ -26,10 +26,13 @@ export async function getServerSideProps() {
 
   const featuredProductId = "";
   await mongooseConnect();
-
+  const id = '649b7c0cd67af36f6056efe4';
+  const productId = await Product.findById();
+  console.log(productId)
   const featuredProductCount = await Product.countDocuments();
   const randomIndex = Math.floor(Math.random() * featuredProductCount);
-  const featuredProduct = await Product.findOne().skip(randomIndex);;
+  const featuredProduct = await Product.findOne().skip(randomIndex);
+  console.log(featuredProduct)
   const newProducts = await Product.find({}, null, {
     sort: { _id: -1 },
     limit: 10,

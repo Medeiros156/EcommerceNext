@@ -30,7 +30,8 @@ const ProductCard = styled(Link)`
   img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    height: 15rem;
+    object-fit: cover;
   }
   @media screen and (max-width: 768px) {
     height: 10rem;
@@ -78,6 +79,10 @@ const CategoryTag = styled.div`
   &:hover {
     background-color: #f0f0f0;
   }
+  @media screen and (max-width: 768px) {
+    max-width: 30%;
+    font-size: .6rem;
+  }
 `
 const Price = styled.div`
   font-size: 1rem;
@@ -89,6 +94,13 @@ const Price = styled.div`
   }
 `;
 
+const CartButton = styled.button`
+  display: block;
+  @media screen and (max-width: 768px) {
+    max-width: 50px;
+    font-size: .6rem;
+  }
+`
 
 
 export default function ProductBox({ _id, title, description, price, images, category, handleFilterTagChange }) {
@@ -118,9 +130,9 @@ export default function ProductBox({ _id, title, description, price, images, cat
         )}
         <PriceRow>
           <Price>R$ {price}</Price>
-          <Button block onClick={() => addProduct(_id)} primary outline>
+          <CartButton onClick={() => addProduct(_id)} primary outline>
             Add to cart
-          </Button>
+          </CartButton>
         </PriceRow>
       </ProductInfoBox>
     </ProductWrapper>

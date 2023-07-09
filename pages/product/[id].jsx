@@ -61,12 +61,31 @@ export default function ProductPage({ product }) {
 }
 
 export async function getServerSideProps(context) {
-  await mongooseConnect();
-  const { id } = context.query;
-  const product = await Product.findById(id);
-  return {
-    props: {
-      product: JSON.parse(JSON.stringify(product)),
+  try {
+    await mongooseConnect();
+    const { id } = context.query;
+    console.log(id);
+
+    const product = await Product.findById(id);
+    console.log(product);
+
+    if (!product) {
+      return {
+        notFound: true, // Return a 404 page or handle the "product not found" scenario
+      };
     }
+
+    return {
+      props: {
+        product: JSON.parse(JSON.stringify(product)),
+      },
+    };
+  } catch (error) {
+    console.error('Error retrieving product:', error);
+    return {
+      props: {
+        product: null, // Handle the error case appropriately in your component
+      },
+    };
   }
 }
