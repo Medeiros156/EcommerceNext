@@ -14,17 +14,21 @@ import { CartContext } from "@/components/CartContext";
 const ColWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 668px) {
     grid-template-columns: .8fr 1.2fr;
+    gap: 60px;
   }
-  gap: 60px;
-  margin: 40px 0;
+  gap: 10px;
+  margin: 40px 20px;
   
-`;
+  `;
 const PriceRow = styled.div`
   display: flex;
   gap: 20px;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: space-around;
+  }
 `;
 const Price = styled.span`
   font-size: 1.4rem;

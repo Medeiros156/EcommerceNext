@@ -63,7 +63,7 @@ const ProductInfoBox = styled.div`
 const PriceRow = styled.div`
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 `;
 

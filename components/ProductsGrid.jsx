@@ -7,7 +7,10 @@ const StyledProductsGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   margin: 50px 0;
   gap: 40px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 536px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: 986px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 `;

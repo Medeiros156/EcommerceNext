@@ -44,9 +44,8 @@ const ColumnsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (min-width: 768px) {
-    
-    padding: 40px 280px;
+  @media screen and (min-width: 1246px) {
+    padding: 20px 20rem;
   }
   
   `;
@@ -70,7 +69,7 @@ const Column = styled.div`
 
 const ProductWrapper = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

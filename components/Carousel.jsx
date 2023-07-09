@@ -5,8 +5,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const StyledBannerImage = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
+  max-height: 370px;
 `;
 
 const PromoDiv = styled.div`
